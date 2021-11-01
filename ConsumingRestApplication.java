@@ -23,6 +23,7 @@ public class ConsumingRestApplication {
 		return restTemplateBuilder.build();
 	}
 
+	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) {
 		return args -> {
 			Quote quote = restTemplate.getForObject(
